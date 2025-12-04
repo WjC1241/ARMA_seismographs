@@ -9,15 +9,14 @@ The project uses **Fortran 90** to implement a workflow for preprocessing, white
 ---
 
 ## 📁 Repository Structure
-.
 ├── src/
-│   ├── 1gauss.f90      # Gaussian noise generator / initial processing
-│   ├── 2mindfp.f90     # Minimum-distance fitting procedure
-│   ├── 3whiten.f90     # Whitening and signal conditioning
-│   └── 4prin.f90       # Principal component / final analysis
-├── data/               # Input seismic time series (not included or add your own)
-├── results/            # Output files and logs
-└── PaperTesisWJCA.pdf  # Full thesis
+│ ├── 1gauss.f90 # Gaussian noise generator / initial processing
+│ ├── 2mindfp.f90 # Minimum-distance fitting procedure
+│ ├── 3whiten.f90 # Whitening and signal conditioning
+│ └── 4prin.f90 # Principal component / final analysis
+├── data/ # Input seismic time series (not included or add your own)
+├── results/ # Output files and logs
+└── PaperTesisWJCA.pdf # Full thesis
 
 
 ## ⚙️ Requirements
@@ -32,17 +31,33 @@ To compile and run the code you will need:
 
 ---
 
-## ▶️ How to Compile
+## ▶️ Compile
 
 From the `src/` directory, compile each script:
 
 ```bash
-gfortran -o gauss 1gauss.f90
-gfortran -o mindfp 2mindfp.f90
-gfortran -o whiten 3whiten.f90
-gfortran -o prin 4prin.f90
+gfortran 1gauss.f90 2mindfp.f90 3whiten.f90 4prin.f90 -o myprogram
 ```
 
+If you want debug info:
+```bash
+gfortran -g 1gauss.f90 2mindfp.f90 3whiten.f90 4prin.f90 -o myprogram
+```
+
+or optinization 
+```bash
+gfortran -O3 1gauss.f90 2mindfp.f90 3whiten.f90 4prin.f90 -o myprogram
+
+```
+
+## ▶️ Run
+
+
+```bash
+./myprogram
+```
+
+## 
 
 ## 📬 Contact
 
