@@ -9,14 +9,15 @@ The project uses **Fortran 90** to implement a workflow for preprocessing, white
 ---
 
 ## 📁 Repository Structure
+```text
 ├── src/
 │ ├── 1gauss.f90 # Gaussian noise generator / initial processing
 │ ├── 2mindfp.f90 # Minimum-distance fitting procedure
 │ ├── 3whiten.f90 # Whitening and signal conditioning
 │ └── 4prin.f90 # Principal component / final analysis
 ├── data/ # Input seismic time series (not included or add your own)
-├── results/ # Output files and logs
-└── PaperTesisWJCA.pdf # Full thesis
+└── results/ # Output files and logs
+ 
 
 
 ## ⚙️ Requirements
